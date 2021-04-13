@@ -1,0 +1,15 @@
+td.details-control {
+    background: url('/customImage/open.png') no-repeat center center;
+    cursor: pointer;
+}
+tr.details td.details-control {
+    background: url('/customImage/close.png') no-repeat center center;
+}
+
+div.slider {
+    display: none;
+}
+
+table.dataTable tbody td.no-padding {
+    padding: 0;
+}

@@ -1,0 +1,9 @@
+expertai:
+  url: https://nlapi.expert.ai/v2/analyze/standard/it
+  username: oserret@expertsystem.com
+  password: Urifici2010!
+  auth:
+    url: https://developer.expert.ai/oauth2/token
+expert:
+  inputFolder: ./inputFolder/
+  outputFolder: ./outputFolder/

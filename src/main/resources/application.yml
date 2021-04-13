@@ -1,0 +1,67 @@
+spring:
+  h2:
+   console:
+     enabled: true
+  thymeleaf:
+    suffix: .html
+    prefix: classpath:/templates/
+  servlet:
+    multipart:
+      max-file-size: 200MB
+      max-request-size: 200MB
+  datasource:
+    url: jdbc:h2:file:./demo
+    driverClassName: org.h2.Driver
+    username: sa
+    password: password
+  jpa:
+    database-platform: org.hibernate.dialect.H2Dialect
+    hibernate:
+      ddl-auto: update
+    #   hibernate:
+   #     ddl-auto: create
+  #    properties:
+  #      hibernate:
+   #       dialect: org.hibernate.dialect.H2Dialect
+  #        default_schema: public
+   #       show_sql: true
+
+  #  view:
+  #    suffix: .html
+  ## The format used for the keystore. It could be set to JKS in case it is a JKS file
+
+server:
+  port: 8443
+  servlet:
+    session:
+      timeout: 1s
+  ssl:
+    enabled: true
+    key-store-type: PKCS12
+    # The path to the keystore containing the certificate
+    key-store: classpath:keystore/httpsfileserver.p12
+    # The password used to generate the certificate
+    key-store-password: httpsfileserver
+    # The alias mapped to the certificate
+    key-alias: httpsfileserver
+#trust store location
+trust:
+  store: classpath:keystore/httpsfileserver.p12
+  #trust store password
+  password: httpsfileserver
+
+######################
+# EXPERT.AI CONFIGURATION
+######################
+expertai:
+  url: https://nlapi.expert.ai/v2/analyze/standard/en
+  username: lupusxalex@gmail.com
+  ## oserret@expertsystem.com
+  password: M@rco1984
+  ##Urifici2010!
+  auth:
+    url: https://developer.expert.ai/oauth2/token
+expert:
+  inputFolder: ./inputFolder/
+  outputFolder: ./outputFolder/
+
